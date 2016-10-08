@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="G76-lS-WKq">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root Navigation Controller-->
+        <scene sceneID="Rx6-fS-KzU">
+            <objects>
+                <navigationController id="G76-lS-WKq" customClass="RootNavigationController" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dsu-ZA-w6Z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="d6p-we-jWK" kind="relationship" relationship="rootViewController" id="DVs-JC-q28"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fW-cl-NJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-367" y="636"/>
+        </scene>
+        <!--个人中心-->
+        <scene sceneID="6Zq-gl-B0u">
+            <objects>
+                <viewController id="d6p-we-jWK" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iV8-Fe-C3M"/>
+                        <viewControllerLayoutGuide type="bottom" id="zOn-Lb-v8F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rYH-Ug-112">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="600" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tNt-dn-oac" customClass="WeiboTableView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tNt-dn-oac" firstAttribute="leading" secondItem="rYH-Ug-112" secondAttribute="leadingMargin" constant="-16" id="1ax-9i-vuw"/>
+                            <constraint firstItem="zOn-Lb-v8F" firstAttribute="top" secondItem="tNt-dn-oac" secondAttribute="bottom" id="PyW-Vh-73B"/>
+                            <constraint firstItem="tNt-dn-oac" firstAttribute="top" secondItem="rYH-Ug-112" secondAttribute="topMargin" id="b52-bs-SBQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tNt-dn-oac" secondAttribute="trailing" constant="-16" id="zua-BD-wkP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="tNt-dn-oac"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="PyW-Vh-73B"/>
+                                <exclude reference="1ax-9i-vuw"/>
+                                <exclude reference="b52-bs-SBQ"/>
+                                <exclude reference="zua-BD-wkP"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="个人中心" id="Mey-DX-61R"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZqN-FU-Y4a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="421" y="636"/>
+        </scene>
+    </scenes>
+</document>

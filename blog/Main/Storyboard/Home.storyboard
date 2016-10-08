@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bvH-bF-wlQ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root Navigation Controller-->
+        <scene sceneID="Dik-J5-9Af">
+            <objects>
+                <navigationController id="bvH-bF-wlQ" customClass="RootNavigationController" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c9I-Ni-3JJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ReV-tY-r83" kind="relationship" relationship="rootViewController" id="6GS-83-bTt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oLW-t0-hMB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-256" y="385"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="XlX-NJ-Drz">
+            <objects>
+                <viewController id="ReV-tY-r83" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m89-dh-6NH"/>
+                        <viewControllerLayoutGuide type="bottom" id="WII-Ds-G5E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rOx-aE-6m3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="600" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hFU-rb-VUE" customClass="WeiboTableView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hFU-rb-VUE" firstAttribute="leading" secondItem="rOx-aE-6m3" secondAttribute="leadingMargin" constant="-20" id="RZd-UH-rh8"/>
+                            <constraint firstItem="hFU-rb-VUE" firstAttribute="top" secondItem="rOx-aE-6m3" secondAttribute="topMargin" id="e7t-7l-32A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hFU-rb-VUE" secondAttribute="trailing" constant="-20" id="qb5-Eb-HzA"/>
+                            <constraint firstItem="WII-Ds-G5E" firstAttribute="top" secondItem="hFU-rb-VUE" secondAttribute="bottom" id="zB8-Vx-llx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="首页" id="tYi-hT-PxE"/>
+                    <connections>
+                        <outlet property="weiboTableView" destination="hFU-rb-VUE" id="OoK-2V-TF5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYb-aO-1oZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="465" y="372"/>
+        </scene>
+        <!--Comment View Controller-->
+        <scene sceneID="gGx-cM-xYA">
+            <objects>
+                <viewController storyboardIdentifier="kCommentViewControllerID" id="enJ-f5-exV" customClass="CommentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CtH-Kh-tvQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="VLn-qu-755"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Ds-Ql-ZQb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="NaQ-Mx-MZC" customClass="CommentTableView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="570"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入评论" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gS7-zi-7jN">
+                                <rect key="frame" x="0.0" y="570" width="600" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gS7-zi-7jN" firstAttribute="leading" secondItem="4Ds-Ql-ZQb" secondAttribute="leadingMargin" constant="-20" id="4kU-IL-9PD"/>
+                            <constraint firstItem="gS7-zi-7jN" firstAttribute="centerX" secondItem="4Ds-Ql-ZQb" secondAttribute="centerX" id="4pm-1h-y7s"/>
+                            <constraint firstItem="VLn-qu-755" firstAttribute="top" secondItem="gS7-zi-7jN" secondAttribute="bottom" id="Hvs-lK-ju8"/>
+                            <constraint firstItem="VLn-qu-755" firstAttribute="top" secondItem="NaQ-Mx-MZC" secondAttribute="bottom" constant="30" id="SZ4-dU-Nu1"/>
+                            <constraint firstItem="NaQ-Mx-MZC" firstAttribute="leading" secondItem="4Ds-Ql-ZQb" secondAttribute="leadingMargin" constant="-20" id="U0m-4j-O1H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NaQ-Mx-MZC" secondAttribute="trailing" constant="-20" id="rP4-K0-zhr"/>
+                            <constraint firstItem="NaQ-Mx-MZC" firstAttribute="top" secondItem="4Ds-Ql-ZQb" secondAttribute="topMargin" id="rgV-Om-1vd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gS7-zi-7jN" secondAttribute="trailing" constant="-20" id="ul5-1E-wTM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cmmtTextField" destination="gS7-zi-7jN" id="TD4-K2-mKX"/>
+                        <outlet property="commentTableView" destination="NaQ-Mx-MZC" id="Ycn-1Z-AYz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uSu-yL-5fb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061" y="411"/>
+        </scene>
+    </scenes>
+</document>

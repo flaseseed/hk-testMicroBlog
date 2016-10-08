@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iEf-s1-9kE">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root Navigation Controller-->
+        <scene sceneID="TTy-d2-v7W">
+            <objects>
+                <navigationController id="iEf-s1-9kE" customClass="RootNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EPB-oZ-3A8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FuS-Hd-vBv" kind="relationship" relationship="rootViewController" id="siR-vm-GUa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yel-gl-5EJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42" y="342"/>
+        </scene>
+        <!--微博-->
+        <scene sceneID="tbJ-AM-Egh">
+            <objects>
+                <viewController id="FuS-Hd-vBv" customClass="RightViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wCJ-io-Wox"/>
+                        <viewControllerLayoutGuide type="bottom" id="T9h-eW-sI5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jP7-xD-Uvy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s90-jT-Wf4" customClass="ThemeButton">
+                                <rect key="frame" x="530" y="72" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="O3P-ha-NMu"/>
+                                    <constraint firstAttribute="width" constant="50" id="SXw-tE-W69"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAction:" destination="FuS-Hd-vBv" eventType="touchUpInside" id="jK8-GJ-zRM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uft-ej-scb" customClass="ThemeButton">
+                                <rect key="frame" x="530" y="132" width="50" height="50"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAction:" destination="FuS-Hd-vBv" eventType="touchUpInside" id="3Li-vz-r4S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0d-A3-hf3" customClass="ThemeButton">
+                                <rect key="frame" x="530" y="192" width="50" height="50"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAction:" destination="FuS-Hd-vBv" eventType="touchUpInside" id="Irk-fY-JrT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="204" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSI-RP-ooC" customClass="ThemeButton">
+                                <rect key="frame" x="530" y="312" width="50" height="50"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAction:" destination="FuS-Hd-vBv" eventType="touchUpInside" id="Yip-Gy-hqs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="205" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlR-3a-S0d" customClass="ThemeButton">
+                                <rect key="frame" x="530" y="372" width="50" height="50"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAction:" destination="FuS-Hd-vBv" eventType="touchUpInside" id="tDg-aL-nNh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="206" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFk-jL-9F1">
+                                <rect key="frame" x="528" y="442" width="50" height="50"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="btn_map_location.png"/>
+                                <connections>
+                                    <action selector="btnAction:" destination="FuS-Hd-vBv" eventType="touchUpInside" id="tuL-TQ-lUu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="207" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKw-yq-OBz">
+                                <rect key="frame" x="528" y="502" width="50" height="50"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="qr_btn.png"/>
+                                <connections>
+                                    <action selector="btnAction:" destination="FuS-Hd-vBv" eventType="touchUpInside" id="cto-Tl-tWQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="203" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmL-ZO-Psw" customClass="ThemeButton">
+                                <rect key="frame" x="530" y="252" width="50" height="50"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAction:" destination="FuS-Hd-vBv" eventType="touchUpInside" id="10K-XM-AAb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KFk-jL-9F1" firstAttribute="height" secondItem="s90-jT-Wf4" secondAttribute="height" id="0Ki-nu-pgn"/>
+                            <constraint firstItem="VSI-RP-ooC" firstAttribute="top" secondItem="QmL-ZO-Psw" secondAttribute="bottom" constant="10" id="3Kc-xL-r57"/>
+                            <constraint firstItem="uft-ej-scb" firstAttribute="width" secondItem="s90-jT-Wf4" secondAttribute="width" id="3Zp-Oo-EUA"/>
+                            <constraint firstItem="nlR-3a-S0d" firstAttribute="height" secondItem="s90-jT-Wf4" secondAttribute="height" id="4Mh-ez-Uve"/>
+                            <constraint firstItem="qKw-yq-OBz" firstAttribute="width" secondItem="s90-jT-Wf4" secondAttribute="width" id="4Xn-vS-v55"/>
+                            <constraint firstItem="W0d-A3-hf3" firstAttribute="top" secondItem="uft-ej-scb" secondAttribute="bottom" constant="10" id="5y5-yw-pBU"/>
+                            <constraint firstItem="VSI-RP-ooC" firstAttribute="width" secondItem="s90-jT-Wf4" secondAttribute="width" id="6CK-Uu-gKt"/>
+                            <constraint firstItem="nlR-3a-S0d" firstAttribute="width" secondItem="s90-jT-Wf4" secondAttribute="width" id="6NJ-9L-sQq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uft-ej-scb" secondAttribute="trailing" id="7bG-Ih-IdL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VSI-RP-ooC" secondAttribute="trailing" id="Cwm-DQ-Bgg"/>
+                            <constraint firstItem="nlR-3a-S0d" firstAttribute="top" secondItem="VSI-RP-ooC" secondAttribute="bottom" constant="10" id="Et8-L1-hNG"/>
+                            <constraint firstItem="QmL-ZO-Psw" firstAttribute="top" secondItem="W0d-A3-hf3" secondAttribute="bottom" constant="10" id="Gxp-rJ-Ff5"/>
+                            <constraint firstItem="s90-jT-Wf4" firstAttribute="top" secondItem="wCJ-io-Wox" secondAttribute="bottom" constant="8" symbolic="YES" id="IMH-UA-8BU"/>
+                            <constraint firstItem="KFk-jL-9F1" firstAttribute="width" secondItem="s90-jT-Wf4" secondAttribute="width" id="Ilc-yn-s8I"/>
+                            <constraint firstItem="W0d-A3-hf3" firstAttribute="height" secondItem="s90-jT-Wf4" secondAttribute="height" id="L2o-5J-MtE"/>
+                            <constraint firstItem="uft-ej-scb" firstAttribute="height" secondItem="s90-jT-Wf4" secondAttribute="height" id="MSc-IU-AKv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qKw-yq-OBz" secondAttribute="trailing" constant="2" id="Oa5-eG-8yR"/>
+                            <constraint firstItem="s90-jT-Wf4" firstAttribute="top" secondItem="wCJ-io-Wox" secondAttribute="bottom" constant="22" id="QFa-vs-OdA"/>
+                            <constraint firstItem="qKw-yq-OBz" firstAttribute="top" secondItem="KFk-jL-9F1" secondAttribute="bottom" constant="10" id="QQ6-hg-LlT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nlR-3a-S0d" secondAttribute="trailing" id="SBY-A5-deq"/>
+                            <constraint firstItem="KFk-jL-9F1" firstAttribute="top" secondItem="nlR-3a-S0d" secondAttribute="bottom" constant="20" id="TBz-dA-8sD"/>
+                            <constraint firstItem="VSI-RP-ooC" firstAttribute="height" secondItem="s90-jT-Wf4" secondAttribute="height" id="WNb-VN-6S1"/>
+                            <constraint firstItem="W0d-A3-hf3" firstAttribute="width" secondItem="s90-jT-Wf4" secondAttribute="width" id="dF6-Lk-On1"/>
+                            <constraint firstItem="uft-ej-scb" firstAttribute="top" secondItem="s90-jT-Wf4" secondAttribute="bottom" constant="10" id="iFE-C6-IUp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QmL-ZO-Psw" secondAttribute="trailing" id="irc-d8-FdX"/>
+                            <constraint firstItem="qKw-yq-OBz" firstAttribute="height" secondItem="s90-jT-Wf4" secondAttribute="height" id="kZt-Pm-c5S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KFk-jL-9F1" secondAttribute="trailing" constant="2" id="mvU-6S-jJL"/>
+                            <constraint firstItem="QmL-ZO-Psw" firstAttribute="width" secondItem="s90-jT-Wf4" secondAttribute="width" id="pOT-Sl-xS6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W0d-A3-hf3" secondAttribute="trailing" id="qVe-Ye-pOB"/>
+                            <constraint firstItem="QmL-ZO-Psw" firstAttribute="height" secondItem="s90-jT-Wf4" secondAttribute="height" id="tw4-Pj-nXL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="s90-jT-Wf4" secondAttribute="trailing" id="u0e-sd-lWZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QFa-vs-OdA"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="微博" id="vNQ-kf-QL9"/>
+                    <connections>
+                        <outlet property="camaraBtn" destination="uft-ej-scb" id="cpb-1b-aKG"/>
+                        <outlet property="locationBtn" destination="nlR-3a-S0d" id="eDf-Pd-wBe"/>
+                        <outlet property="multBtn" destination="VSI-RP-ooC" id="XXq-GJ-O5x"/>
+                        <outlet property="photoBtn" destination="W0d-A3-hf3" id="aiv-UJ-iS6"/>
+                        <outlet property="videoBtn" destination="QmL-ZO-Psw" id="z1U-FB-ii1"/>
+                        <outlet property="writeBtn" destination="s90-jT-Wf4" id="sHy-ip-SUA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0vB-yh-hfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="661" y="300"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_map_location.png" width="35" height="35"/>
+        <image name="qr_btn.png" width="40" height="40"/>
+    </resources>
+</document>

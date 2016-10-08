@@ -1,0 +1,15 @@
+//
+//  Weibo.pch
+//  blog
+//
+//  Created by wenyuan on 1/13/16.
+//  Copyright © 2016 george. All rights reserved.
+//
+
+#ifndef Weibo_pch
+#define Weibo_pch
+
+#import <UIKit/UIKit.h>
+#import "Common.h"
+
+#endif
